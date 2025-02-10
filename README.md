@@ -36,4 +36,8 @@ The `dvt_lsd_tools.sh` script is sourced from the `staker-package-scripts` repos
 
 ### Upstream Repository
 
-Currently, there is no upstream repository for this package. The existing release tags for the Shutter components do not correspond directly to Docker image tags, which is why an official upstream repo has not been configured yet. Once the release tags align with the Docker image tags, this can be integrated to automate updates and version tracking for the package.
+The upstream repository is https://github.com/dappnode/DAppNodePackage-shutter.
+
+### Special versions
+
+Branch `shutter_service_gnosis` has an alternative version for running a shutter service keyper on gnosis chain.

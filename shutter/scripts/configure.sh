@@ -18,7 +18,7 @@ generate_keyper_config() {
 
     echo "[INFO | configure] Generating configuration files..."
 
-    $SHUTTER_BIN gnosiskeyper generate-config --output "$KEYPER_GENERATED_CONFIG_FILE"
+    $SHUTTER_BIN shutterservicekeyper generate-config --output "$KEYPER_GENERATED_CONFIG_FILE"
 }
 
 init_keyper_db() {
@@ -31,7 +31,7 @@ init_keyper_db() {
 
     echo "[INFO | configure] Initializing keyper database..."
 
-    $SHUTTER_BIN gnosiskeyper initdb --config "$KEYPER_GENERATED_CONFIG_FILE"
+    $SHUTTER_BIN shutterservicekeyper initdb --config "$KEYPER_GENERATED_CONFIG_FILE"
 }
 
 init_chain() {

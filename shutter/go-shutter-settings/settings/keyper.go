@@ -17,7 +17,7 @@ type KeyperConfig struct {
 		GenesisSlotTimestamp int `env:"_ASSETS_GENESIS_SLOT_TIMESTAMP"`
 		SyncStartBlockNumber int `env:"_ASSETS_SYNC_START_BLOCK_NUMBER"`
 		Node                 struct {
-			PrivateKey    string `env:"SHUTTER_GNOSIS_NODE_PRIVATEKEY"`
+			PrivateKey    string `env:"SHUTTER_SERVICE_NODE_PRIVATEKEY"`
 			ContractsURL  string `env:"SHUTTER_GNOSIS_NODE_CONTRACTSURL"`
 			DeploymentDir string `env:"SHUTTER_DEPLOYMENT_DIR"` // Unused
 			EthereumURL   string `env:"SHUTTER_GNOSIS_NODE_ETHEREUMURL"`
@@ -25,8 +25,7 @@ type KeyperConfig struct {
 		Contracts struct {
 			KeyperSetManager     string `env:"_ASSETS_KEYPER_SET_MANAGER"`
 			KeyBroadcastContract string `env:"_ASSETS_KEY_BROADCAST_CONTRACT"`
-			Sequencer            string `env:"_ASSETS_SEQUENCER"`
-			ValidatorRegistry    string `env:"_ASSETS_VALIDATOR_REGISTRY"`
+			ShutterRegistry      string `env:"_ASSETS_SHUTTER_REGISTRY"`
 		}
 	}
 	P2P struct {

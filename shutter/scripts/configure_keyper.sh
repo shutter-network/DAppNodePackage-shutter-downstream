@@ -16,8 +16,6 @@ if [[ ! "$SHUTTER_P2P_LISTENADDRESSES" =~ ^\[.*\]$ ]]; then
 fi
 
 export SHUTTER_P2P_ADVERTISEADDRESSES="[\"/ip4/${_DAPPNODE_GLOBAL_PUBLIC_IP}/tcp/${KEYPER_PORT}\", \"/ip4/${_DAPPNODE_GLOBAL_PUBLIC_IP}/udp/${KEYPER_PORT}/quic-v1\"]"
-export SHUTTER_BEACONAPIURL=$(get_beacon_api_url_from_global_env "$NETWORK" "$SUPPORTED_NETWORKS")
-export SHUTTER_GNOSIS_NODE_CONTRACTSURL=http://execution.gnosis.dncore.dappnode:8545
 export SHUTTER_GNOSIS_NODE_ETHEREUMURL=$(get_execution_ws_url_from_global_env "$NETWORK" "$SUPPORTED_NETWORKS")
 export VALIDATOR_PUBLIC_KEY=$(cat "${SHUTTER_CHAIN_DIR}/config/priv_validator_pubkey.hex")
 export SHUTTER_METRICS_ENABLED=${SHUTTER_PUSH_METRICS_ENABLED}

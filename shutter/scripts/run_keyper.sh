@@ -18,7 +18,7 @@ perform_chain_healthcheck() {
 }
 
 run_keyper() {
-    $SHUTTER_BIN gnosiskeyper --config "$KEYPER_CONFIG_FILE"
+    $SHUTTER_BIN shutterservicekeyper --config "$KEYPER_CONFIG_FILE"
 }
 
 perform_chain_healthcheck
