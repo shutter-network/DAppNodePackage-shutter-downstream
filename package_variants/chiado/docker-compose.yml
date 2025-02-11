@@ -2,11 +2,11 @@ services:
   shutter:
     build:
       args:
-        NETWORK: gnosis
+        NETWORK: chiado
         CHAIN_PORT: 27656
         KEYPER_PORT: 24003
         KEYPER_METRICS_PORT: 9200
-        ASSETS_VERSION: shutter-service-1000-v1.0.0
+        ASSETS_VERSION: shutter-service-102000-v1.0.0
     ports:
       - "24003:23003"
       - "27656:26656"
@@ -16,5 +16,5 @@ services:
   metrics:
     build:
       args:
-        NETWORK: gnosis
-        ASSETS_VERSION: shutter-service-1000-v1.0.0
+        NETWORK: chiado
+        ASSETS_VERSION: shutter-service-102000-v1.0.0

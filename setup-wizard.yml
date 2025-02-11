@@ -16,7 +16,7 @@ fields:
       This private key must correspond to one of the addresses defined as a Keyper in the Shutter network.
     target:
       type: environment
-      name: SHUTTER_SERVICE_NODE_PRIVATEKEY
+      name: SHUTTER_API_NODE_PRIVATEKEY
       service: shutter
     required: false
     secret: true

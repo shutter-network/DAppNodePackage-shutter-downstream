@@ -13,14 +13,13 @@ services:
     build:
       context: shutter
       args:
-        ASSETS_VERSION: shutter-service-1000-v1.0.0 
         UPSTREAM_VERSION: v1.3.0-api
         KEYPER_CONFIG_DIR: /keyper/config
         SHUTTER_CHAIN_DIR: /chain
         STAKER_SCRIPTS_VERSION: v0.1.0
     restart: unless-stopped
     environment:
-      SHUTTER_SERVICE_NODE_PRIVATEKEY: ""
+      SHUTTER_API_NODE_PRIVATEKEY: ""
       SHUTTER_PUSH_METRICS_ENABLED: false
       KEYPER_NAME: ""
     volumes:
@@ -30,11 +29,9 @@ services:
   metrics:
     build:
       context: metrics
-      args:
-        ASSETS_VERSION: shutter-service-1000-v1.0.0
     restart: on-failure
     environment:
-      SHUTTER_PUSH_METRICS_ENABLED: false
+      SHUTTER_PUSH_METRICS_ENABLED: true
       KEYPER_NAME: ""
       PUSHGATEWAY_URL: "https://keyperingest.metrics.shutter.network/api/v1/write"
       PUSHGATEWAY_USERNAME: ""
