@@ -6,7 +6,7 @@ services:
         CHAIN_PORT: 27656
         KEYPER_PORT: 24003
         KEYPER_METRICS_PORT: 9200
-        ASSETS_VERSION: shutter-service-102000-v1.0.0
+        ASSETS_VERSION: shutter-api-chiado-1000-v0.0.2
     ports:
       - "24003:23003"
       - "27656:26656"
@@ -17,4 +17,4 @@ services:
     build:
       args:
         NETWORK: chiado
-        ASSETS_VERSION: shutter-service-102000-v1.0.0
+        ASSETS_VERSION: shutter-api-chiado-1000-v0.0.2
