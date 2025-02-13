@@ -22,7 +22,7 @@ RUN apt-get update && \
 
 ENV SHUTTER_GNOSIS_SM_BLOCKTIME=10 \
     SHUTTER_GNOSIS_GENESIS_KEYPER=0x440Dc6F164e9241F04d282215ceF2780cd0B755e \
-    SHUTTER_DATABASEURL=postgres://postgres@db.shutter.api.${NETWORK}.dappnode:5432/keyper \
+    SHUTTER_DATABASEURL=postgres://postgres@db.shutter-api-${NETWORK}.dappnode:5432/keyper \
     SHUTTER_SHUTTERMINT_SHUTTERMINTURL=http://localhost:26657 \
     CHAIN_LISTEN_PORT=26657 \
     SHUTTER_BIN=/rolling-shutter \

@@ -24,7 +24,7 @@ generate_keyper_config() {
 init_keyper_db() {
     echo "[INFO | configure] Waiting for the database to be ready..."
 
-    until pg_isready -h "db.shutter.api.${NETWORK}.dappnode" -p 5432 -U postgres; do
+    until pg_isready -h "db.shutter-api-${NETWORK}.dappnode" -p 5432 -U postgres; do
         echo "[INFO | configure] Database is not ready yet. Retrying in 5 seconds..."
         sleep 5
     done
