@@ -11,7 +11,7 @@ type KeyperConfig struct {
 	DatabaseURL          string `env:"SHUTTER_DATABASEURL"`
 	BeaconAPIURL         string `env:"SHUTTER_BEACONAPIURL"`
 	MaxNumKeysPerMessage int    `env:"_ASSETS_MAX_NUM_KEYS_PER_MESSAGE"`
-	Gnosis               struct {
+	Chain               struct {
 		EncryptedGasLimit    int `env:"_ASSETS_ENCRYPTED_GAS_LIMIT"`
 		MaxTxPointerAge      int `env:"_ASSETS_MAX_TX_POINTER_AGE"`
 		GenesisSlotTimestamp int `env:"_ASSETS_GENESIS_SLOT_TIMESTAMP"`
