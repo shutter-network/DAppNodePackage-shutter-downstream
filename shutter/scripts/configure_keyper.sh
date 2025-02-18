@@ -8,7 +8,7 @@
 
 echo "[INFO | configure] Calculating keyper configuration values..."
 
-SUPPORTED_NETWORKS="gnosis chiado"
+SUPPORTED_NETWORKS="gnosis"
 
 # Conditionally add square brackets to SHUTTER_P2P_LISTENADDRESSES
 if [[ ! "$SHUTTER_P2P_LISTENADDRESSES" =~ ^\[.*\]$ ]]; then
@@ -16,7 +16,9 @@ if [[ ! "$SHUTTER_P2P_LISTENADDRESSES" =~ ^\[.*\]$ ]]; then
 fi
 
 export SHUTTER_P2P_ADVERTISEADDRESSES="[\"/ip4/${_DAPPNODE_GLOBAL_PUBLIC_IP}/tcp/${KEYPER_PORT}\", \"/ip4/${_DAPPNODE_GLOBAL_PUBLIC_IP}/udp/${KEYPER_PORT}/quic-v1\"]"
+export SHUTTER_GNOSIS_NODE_CONTRACTSURL=$(get_execution_ws_url_from_global_env "$NETWORK" "$SUPPORTED_NETWORKS")
 export SHUTTER_NETWORK_NODE_ETHEREUMURL=$(get_execution_ws_url_from_global_env "$NETWORK" "$SUPPORTED_NETWORKS")
+echo "[DEBUG | configure] SHUTTER_NETWORK_NODE_ETHEREUMURL is ${SHUTTER_NETWORK_NODE_ETHEREUMURL}"
 export VALIDATOR_PUBLIC_KEY=$(cat "${SHUTTER_CHAIN_DIR}/config/priv_validator_pubkey.hex")
 export SHUTTER_METRICS_ENABLED=${SHUTTER_PUSH_METRICS_ENABLED}
 
