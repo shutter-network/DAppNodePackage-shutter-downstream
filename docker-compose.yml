@@ -22,6 +22,7 @@ services:
       SHUTTER_API_NODE_PRIVATEKEY: ""
       SHUTTER_PUSH_METRICS_ENABLED: false
       KEYPER_NAME: ""
+      ETHEREUM_WS: ""
     volumes:
       - chain:/chain
       - keyper-config:/keyper/config
